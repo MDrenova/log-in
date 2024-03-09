@@ -1,0 +1,209 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.background-sec {
+    min-height: 100vh;
+    background: radial-gradient(#00000078 38%, #00000061 69%), url(./images/bg.jpg.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 26%;
+    color: #fff;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 960px;
+    /* border: 2px solid; */
+    height: auto;
+    padding: 20px;
+}
+
+.background-sec, .container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 0px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.container form {
+    gap: 20px;
+    width: 450px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"] {
+    height: 45px;
+    width: 84%;
+    border: 1px solid transparent;
+    background: rgb(255 255 255 / 12%);
+    backdrop-filter: blur(1px);
+    border-radius: 40px;
+    padding: 5px 35px;
+    transition: 0.3s;
+    font-size: 16px;
+    color: #fff;
+}
+
+::placeholder {
+    color: #fff;
+    opacity: 1 !important;
+}
+
+::-ms-input-placeholder{
+    color: #fff;
+    opacity: 1 !important;
+}
+
+button.signupbtn {
+    font-size: 16px;
+    padding: 10px 35px;
+    height: 55px;
+    width: 325px;
+    border-radius: 40px;
+    background-color: #fbceb5;
+    border: 1px solid #fbceb5;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: .4s;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.button-part {
+    width: 100%;
+    text-align: center;
+}
+
+input[type="password"] + label input {
+    opacity: 0;
+}
+
+input[type="password"] + label {
+    position: relative;
+    margin-left: 1px;
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+.checkmark, .radio-button {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 16px;
+    height: 16px;
+    background: rgb(255 255 255 / 12%);
+    backdrop-filter: blur(1px);
+    border: 1px solid #fbceb5;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: transparent;
+}
+
+.container input:checked ~ .checkmark::after{
+    display: block;
+}
+
+.container .checkmark::after{
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    display: none;
+    transition: .4s;
+}
+
+form input[type="text"]:focus-visible, 
+form input[type="email"]:focus-visible, 
+form input[type="password"]:focus-visible {
+    outline: none;
+    border: 1px solid #fff;
+}
+
+.rad-container {
+    width: 100%;
+}
+
+.rad-container label {
+    position: relative;
+    width: 50px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.radio-button{
+    border-radius: 50%;
+    left: auto;
+    right: 0px;
+}
+
+.rad-container label:nth-child(2) {
+    margin-left: 30px;
+}
+
+input[type="radio"] {
+    opacity: 0;
+}
+
+.radio-button::after{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: none;
+    transition: .4s;
+    background-color: #fbceb5;
+}
+
+.container input:checked ~ .radio-button{
+    border-color: #fff;
+}
+
+.container input:checked ~ .radio-button::after{
+    display: block;
+}
+
+button.signupbtn:hover {
+    background: rgb(255 255 255 / 12%);
+    backdrop-filter: blur(1px);
+    color: #fff;
+}
+
+button.signupbtn::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -1px;
+    width: 100%;
+    height: 100%;
+    background: #fbceb5;
+    border: 1px solid #fbceb5;
+    border-radius: 40px;
+    transition: .4s;
+    z-index: -1;
+}
+
+button.signupbtn:hover:after {
+    width: 0;
+}

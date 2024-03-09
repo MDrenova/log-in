@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Sing up - Sign in</title>
+</head>
+<body>
+    <section class="background-sec">
+        <div class="container">
+            <h1>Sing Up!</h1>
+            <form action="/action_page.php">
+                <input type="text" placeholder="Full Name*" name="userName" required>
+                <div class="rad-container">
+                    <label>F
+                        <input type="radio" name="radio">
+                        <span class="radio-button"></span>
+                    </label>
+                    <label>M
+                        <input type="radio" name="radio">
+                        <span class="radio-button"></span>
+                    </label>
+                </div>
+                <input type="email" placeholder="Email@example.com" name="email" required>
+
+                <input type="password" placeholder="Enter Password" name="psw" required>
+              
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                  
+                <label>
+                    <input type="checkbox" name="privacy" required>
+                    <span class="checkmark"></span> By clicking this you agree with our Privacy Policy data
+                </label>
+                <div class="button-part">
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
